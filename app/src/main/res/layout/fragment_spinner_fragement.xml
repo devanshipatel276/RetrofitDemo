@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <data>
+
+        <variable
+            name="countrymodel"
+            type="model.CountryModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e8009688"
+        tools:context="fragement.SpinnerFragement">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:theme="@style/TextColor"
+                android:popupBackground="#e1f7d5">
+
+
+            </Spinner>
+
+            <Button
+                android:id="@+id/btnLanguage"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Languages"
+                android:background="@drawable/buttonshape"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_gravity="end"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#49009688">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="Name :"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black" />
+                        <TextView
+                            android:id="@+id/name"
+                            android:text="@{countrymodel.name}"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="NativeName :"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/nativeName"
+                            android:text="@{countrymodel.nativeName}"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="0.7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="Capital : "
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/capital"
+                            android:layout_width="0dp"
+                            android:text="@{countrymodel.capital}"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="0.7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="0.3"
+                            android:text="Population :"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/population"
+                            android:layout_width="0dp"
+                            android:text="@{countrymodel.population}"
+                            android:textColor="@android:color/black"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="Region :"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/region"
+                            android:layout_width="0dp"
+                            android:text="@{countrymodel.region}"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="0.7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="0.3"
+                            android:text="SubRegion :"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/subregion"
+                            android:layout_width="0dp"
+                            android:text="@{countrymodel.subregion}"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="0.7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="Area :"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/area"
+                            android:layout_width="0dp"
+                            android:text="@{countrymodel.area}"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="0.7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="0.3"
+                            android:text="Flag :"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/flag"
+                            android:layout_width="0dp"
+                            android:textColor="@android:color/black"
+                            android:text="@{countrymodel.flag}"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="0.3"
+                            android:text="NumericCode :"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/numericCode"
+                            android:layout_width="0dp"
+                            android:text="@{countrymodel.numericCode}"
+                            android:textColor="@android:color/black"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="0.3"
+                            android:text="Alpha2Code :"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/alpha2Code"
+                            android:layout_width="0dp"
+                            android:text="@{countrymodel.alpha2Code}"
+
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="0.7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="Alpha3Code :"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/alpha3Code"
+                            android:layout_width="0dp"
+                            android:text="@{countrymodel.alpha3Code}"
+                            android:textColor="@android:color/black"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="Demonym :"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/demonym"
+                            android:layout_width="0dp"
+                            android:text="@{countrymodel.demonym}"
+
+                            android:textColor="@android:color/black"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="Gini :"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/gini"
+                            android:layout_width="0dp"
+                            android:text="@{countrymodel.gini}"
+                            android:textColor="@android:color/black"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="Cioc :"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/cioc"
+                            android:layout_width="0dp"
+                            android:text="@{countrymodel.cioc}"
+                            android:textColor="@android:color/black"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+</layout>

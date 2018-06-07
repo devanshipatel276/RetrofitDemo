@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="usermodel"
+            type="model.UserModel"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".UserInfoActivity">
+        <include
+            layout="@layout/username"
+            app:customvalue="@{usermodel.name}"/>
+        <include
+            layout="@layout/username"
+            app:customvalue="@{usermodel.address}"/>
+
+
+    </LinearLayout>
+
+</layout>
